@@ -11,4 +11,4 @@ python3 mnist.py
 
 ---
 # Neural Network Prediction Visuals
-<img src="https://i.imgur.com/1uT239s.pn" width="600" height="220">
+<img src="https://i.imgur.com/1uT239s.png" width="600" height="220">
