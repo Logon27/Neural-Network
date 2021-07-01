@@ -8,3 +8,7 @@ This code is part of my video series on YouTube: [Neural Network from Scratch | 
 python3 xor.py
 python3 mnist.py
 ```
+
+---
+# Neural Network Prediction Visuals
+<img src="https://i.imgur.com/1uT239s.pn" width="600" height="220">
