@@ -10,7 +10,7 @@ X = np.reshape([[0, 0], [0, 1], [1, 0], [1, 1]], (4, 2, 1))
 Y = np.reshape([[0], [1], [1], [0]], (4, 1, 1))
 
 epochs = 10000
-learning_rate = 0.1
+learning_rate = 0.3
 
 network = [
     Dense(2, 3),
@@ -37,7 +37,8 @@ for e in range(epochs):
             grad = layer.backward(grad, learning_rate)
 
     error /= len(X)
-    print(f"{e + 1}/{epochs}, error={error}")
+    if e % 1000 == 0:
+      print('%d/%d, error=%f' % (e + 1, epochs, error))
 
 # prediction
 print()
@@ -45,7 +46,7 @@ for x in X:
     z = x
     for layer in network:
         z = layer.forward(z)
-    print(x.tolist(), "->", z)
+    print(x.tolist(), '->', z)
 
 # decision boundary plot
 points = []
@@ -59,6 +60,6 @@ for x in np.linspace(0, 1, 20):
 points = np.array(points)
 
 fig = plt.figure()
-ax = fig.add_subplot(111, projection="3d")
-ax.scatter(points[:, 0], points[:, 1], points[:, 2], c=points[:, 2], cmap="winter")
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(points[:, 0], points[:, 1], points[:, 2], c=points[:, 2], cmap='winter')
 plt.show()
