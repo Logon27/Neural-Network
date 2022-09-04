@@ -1,9 +1,10 @@
 import numpy as np
 from keras.datasets import mnist
 from keras.utils import np_utils
+import matplotlib.pyplot as plt
 
 from dense import Dense
-from activations import Tanh
+from activations import Sigmoid, Tanh
 from losses import mse, mse_prime
 
 # load MNIST from server
@@ -38,7 +39,7 @@ network = [
     Sigmoid()
 ]
 
-epochs = 25
+epochs = 5
 learning_rate = 0.3
 #not doing anything right now
 num_samples = 1500
