@@ -5,8 +5,11 @@ This code is part of my video series on YouTube: [Neural Network from Scratch | 
 # Try it!
 
 ```
-python3 xor.py
+#for enhanced visuals
 python3 mnist.py
+
+#test program
+python3 xor.py
 ```
 
 ---
